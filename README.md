@@ -1,5 +1,5 @@
 <!-- GETTING STARTED -->
-## About the repo
+## About
 
 Contains instructions to use Automatic Migrations for Entity Framework Core for SQL Databases for [EFCore.AutomaticMigrations](https://www.nuget.org/packages/EFCore.AutomaticMigrations/) nuget package. Please feel free to open any issue you might have or idea for improvements.
 
