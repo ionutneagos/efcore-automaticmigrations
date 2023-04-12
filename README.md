@@ -73,9 +73,9 @@ The package support following ways to apply/view-applied migrations:
    //Get context
    var context = services.GetRequiredService<YourContext>();
    // Get applied migrations
-    List<MigrationRaw> appliedMigrations = context.ListMigrations();
+    List<MigrationRaw> appliedMigrations = context.ListAppliedMigrations();
    // Get applied migrations async
-    List<MigrationRaw> appliedMigrations = await context.ListMigrationsAsync();
+    List<MigrationRaw> appliedMigrations = await context.ListAppliedMigrationsAsync();
    
     /// <summary>
     /// Migration Raw object
@@ -86,3 +86,31 @@ The package support following ways to apply/view-applied migrations:
         public DateTime? CreatedDate { get; set; } = null;
     }
   ``` 
+  4. View migration operations which will be applied as raw sql [added in **7.0.5**]
+  ```cs
+   //Get context
+   var context = services.GetRequiredService<YourContext>();
+   // List migration operations which will be applied as raw sql
+    var migrationOperationsAsRawSql = context.ListMigrationOperationsAsRawSql();
+   // ist migration operations which will be applied as raw sql async
+    var migrationOperationsAsRawSql = await context.ListMigrationOperationsAsRawSqlAsync();
+  ``` 
+  
+## Release 7.0.5
+
+### Breaking Changes
+ **ListMigrations** and **ListMigrationsAsync** methods are marked as deprecated. Please use **ListAppliedMigrations** / **ListAppliedMigrationsAsync** instead.
+
+### New Features
+ Added the option to list migration operations which will be applied as raw sql via **ListMigrationOperationsAsRawSql** and **ListMigrationOperationsAsRawSqlAsync** context methods.
+ 
+ Can be useful to check generated sql scripts which will be executed to update the model or to check if migrations needs to be applied.
+ 
+ ---
+
+ ![image](https://user-images.githubusercontent.com/9897204/231458299-2569013e-0b14-4799-b922-1719278c269b.png)
+
+ ---
+
+ 
+ 
