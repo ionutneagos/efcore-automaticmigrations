@@ -11,7 +11,7 @@ DbMigrationsOptions object allows to configure migration options:
 /// <summary>
 /// Allow auto migration with data lost. 
 /// </summary>
-public bool AutomaticMigrationDataLossAllowed { get; set; } = true;
+public bool AutomaticMigrationDataLossAllowed { get; set; } = false;
 /// <summary>
 /// Enable to execute auto migration
 /// </summary>
@@ -99,7 +99,7 @@ The package support following ways to apply/view-applied migrations:
 ## Release 7.0.5
 
 ### Breaking Changes
- **ListMigrations** and **ListMigrationsAsync** methods are marked as deprecated. Please use **ListAppliedMigrations** / **ListAppliedMigrationsAsync** instead.
+ **ListMigrations** and **ListMigrationsAsync** methods are marked as deprecated and will be removed in further. Please use **ListAppliedMigrations** / **ListAppliedMigrationsAsync** instead.
 
 ### New Features
  Added the option to list migration operations which will be applied as raw sql via **ListMigrationOperationsAsRawSql** and **ListMigrationOperationsAsRawSqlAsync** context methods.
