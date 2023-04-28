@@ -1,7 +1,11 @@
 <!-- GETTING STARTED -->
-## About
+# About
 
-Contains instructions to use [EFCore.AutomaticMigrations](https://www.nuget.org/packages/EFCore.AutomaticMigrations/) nuget package for Automatic Migrations with Entity Framework Core SQL Databases. Please feel free to open any issue you might have or idea for improvements.
+Contains instructions to use [EFCore.AutomaticMigrations](https://www.nuget.org/packages/EFCore.AutomaticMigrations/) nuget package for Automatic Migrations with Entity Framework Core SQL Databases. 
+
+[EFCore.AutomaticMigrations](https://www.nuget.org/packages/EFCore.AutomaticMigrations/) allows you to use code first migrations without having a code file in your project for each change you make.
+
+Please feel free to open any issue you might have or idea for improvements.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -17,7 +21,7 @@ public bool AutomaticMigrationDataLossAllowed { get; set; } = false;
 /// </summary>
 public bool AutomaticMigrationsEnabled { get; set; } = true;
 /// <summary>
-///  Drop all tables from database and recreate based on model snapshot. Useful in scenarios when the data is transient and can be dropped when the schema changes. For example during prototyping, in tests, or for local caches
+///  Drop all tables from database and recreate based on model snapshot. Useful in scenarios when the data is transient and can be dropped when the schema changes. For example during prototyping, in tests, or for local changes
 /// When ResetDatabaseSchema is true AutomaticMigrationsEnabled and AutomaticMigrationDataLossAllowed are set to true
 /// </summary>
 public bool ResetDatabaseSchema { get; set; } = false;
