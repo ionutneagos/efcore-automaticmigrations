@@ -25,6 +25,13 @@ public bool AutomaticMigrationsEnabled { get; set; } = true;
 /// When ResetDatabaseSchema is true AutomaticMigrationsEnabled and AutomaticMigrationDataLossAllowed are set to true
 /// </summary>
 public bool ResetDatabaseSchema { get; set; } = false;
+
+/// <summary>
+/// Permit model snapshot to be updated. The key will be replaced with the appropriate value for each key-value pair provided.
+///
+</summary>
+public Dictionary<string, string> UpdateSnapshot { get; set; } = new Dictionary<string, string>;
+
   ``` 
 The package support following ways to apply/view-applied migrations:
 
